@@ -97,12 +97,18 @@ const Checkout = () => {
   const finalPrice = planPrice ? parseFloat(planPrice) : selectedPlan.price;
 
   useEffect(() => {
-    if (selectedPlan.isCustom && !customerInfo.amount) {
-      setCustomerInfo(prev => ({ ...prev, amount: '' }));
-    } else if (!selectedPlan.isCustom) {
-      setCustomerInfo(prev => ({ ...prev, amount: finalPrice.toString() }));
+    if (selectedPlan.isCustom) {
+      // For custom plans, don't set a default amount
+      if (customerInfo.amount && !selectedPlan.isCustom) {
+        setCustomerInfo(prev => ({ ...prev, amount: '' }));
+      }
+    } else {
+      // For fixed plans, set the price
+      if (customerInfo.amount !== finalPrice.toString()) {
+        setCustomerInfo(prev => ({ ...prev, amount: finalPrice.toString() }));
+      }
     }
-  }, [selectedPlan, finalPrice]);
+  }, [selectedPlan, finalPrice, customerInfo.amount]);
 
   const handleInputChange = (e) => {
     setCustomerInfo({
