@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "total_tests": 9,
+    "passed_tests": 9,
+    "failed_tests": 0,
+    "success_rate": 100.0,
+    "timestamp": "2025-10-05T03:23:42.444991"
+  },
+  "detailed_results": [
+    {
+      "test_name": "API Root",
+      "success": true,
+      "details": "Status: 200, Message: Web X Media API",
+      "response_data": null,
+      "timestamp": "2025-10-05T03:23:40.321861"
+    },
+    {
+      "test_name": "Contact Form Submission",
+      "success": true,
+      "details": "Status: 200, Success: True",
+      "response_data": null,
+      "timestamp": "2025-10-05T03:23:40.396139"
+    },
+    {
+      "test_name": "Contact Form Retrieval",
+      "success": true,
+      "details": "Status: 200, Forms count: 2",
+      "response_data": null,
+      "timestamp": "2025-10-05T03:23:40.435988"
+    },
+    {
+      "test_name": "Checkout Session (Bronze)",
+      "success": true,
+      "details": "Status: 200, URL: https://checkout.stripe.com/c/pay/cs_test_a18WPm9r..., Session ID: cs_test_a18WPm9ryOsU...",
+      "response_data": null,
+      "timestamp": "2025-10-05T03:23:40.845692"
+    },
+    {
+      "test_name": "Checkout Session (Silver)",
+      "success": true,
+      "details": "Status: 200, URL: https://checkout.stripe.com/c/pay/cs_test_a1ur3DR0..., Session ID: cs_test_a1ur3DR0dmTu...",
+      "response_data": null,
+      "timestamp": "2025-10-05T03:23:41.253812"
+    },
+    {
+      "test_name": "Checkout Session (Gold)",
+      "success": true,
+      "details": "Status: 200, URL: https://checkout.stripe.com/c/pay/cs_test_a17yrFiv..., Session ID: cs_test_a17yrFivliDY...",
+      "response_data": null,
+      "timestamp": "2025-10-05T03:23:41.700803"
+    },
+    {
+      "test_name": "Checkout Session (Custom)",
+      "success": true,
+      "details": "Status: 200, URL: https://checkout.stripe.com/c/pay/cs_test_a13VrdJ7..., Session ID: cs_test_a13VrdJ7fWJ5...",
+      "response_data": null,
+      "timestamp": "2025-10-05T03:23:42.124015"
+    },
+    {
+      "test_name": "Checkout Status",
+      "success": true,
+      "details": "Status: 200, Payment Status: unpaid",
+      "response_data": null,
+      "timestamp": "2025-10-05T03:23:42.400768"
+    },
+    {
+      "test_name": "Invalid Endpoint (404)",
+      "success": true,
+      "details": "Status: 404 (Expected 404)",
+      "response_data": null,
+      "timestamp": "2025-10-05T03:23:42.444307"
+    }
+  ]
+}
